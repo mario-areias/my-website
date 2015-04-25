@@ -1,0 +1,251 @@
+{
+  "name": "Fontello",
+  "glyphs": [
+    {
+      "search": [
+        "arrow",
+        "up"
+      ],
+      "code": 8593,
+      "uid": "dbc97808cba7d0c135c7054e7a85fb86",
+      "css": "up-thin",
+      "orig_css": "up-thin",
+      "orig_code": 8593,
+      "src": "entypo",
+      "from": 8593
+    },
+    {
+      "search": [
+        "arrow",
+        "up"
+      ],
+      "code": 9652,
+      "uid": "401b644723fb2f20b0df30cce7745c18",
+      "css": "up-dir",
+      "orig_css": "up-dir",
+      "orig_code": 9652,
+      "src": "entypo",
+      "from": 9652
+    },
+    {
+      "search": [
+        "mail",
+        "email"
+      ],
+      "code": 9993,
+      "uid": "e335adbc2d898c7d85d40c507796e7b4",
+      "css": "mail",
+      "orig_css": "mail",
+      "orig_code": 9993,
+      "src": "entypo",
+      "from": 9993
+    },
+    {
+      "search": [
+        "pen",
+        "write",
+        "reply",
+        "edit",
+        "feather"
+      ],
+      "code": 10002,
+      "uid": "bcb868184ff9c35f8aef564f50c0d649",
+      "css": "feather",
+      "orig_css": "feather",
+      "orig_code": 10002,
+      "src": "entypo",
+      "from": 10002
+    },
+    {
+      "search": [
+        "quote"
+      ],
+      "code": 10078,
+      "uid": "c3e5dafba1739ef33cc574c7484febf7",
+      "css": "quote",
+      "orig_css": "quote",
+      "orig_code": 10078,
+      "src": "entypo",
+      "from": 10078
+    },
+    {
+      "search": [
+        "arrow",
+        "up"
+      ],
+      "code": 58543,
+      "uid": "8c8f768607b8fc4c92c0f85b488e87e8",
+      "css": "up-bold",
+      "orig_css": "up-bold",
+      "orig_code": 58543,
+      "src": "entypo",
+      "from": 58543
+    },
+    {
+      "search": [
+        "address"
+      ],
+      "code": 59171,
+      "uid": "540b6a4262be769515c79700618b4aea",
+      "css": "address",
+      "orig_css": "address",
+      "orig_code": 59171,
+      "src": "entypo",
+      "from": 59171
+    },
+    {
+      "search": [
+        "location",
+        "mark",
+        "marker"
+      ],
+      "code": 59172,
+      "uid": "a42b598e4298f3319b25a2702a02e7ff",
+      "css": "location",
+      "orig_css": "location",
+      "orig_code": 59172,
+      "src": "entypo",
+      "from": 59172
+    },
+    {
+      "search": [
+        "down"
+      ],
+      "code": 59175,
+      "uid": "64f5a50cf7ac972a56a9a511acb5d28e",
+      "css": "map",
+      "orig_css": "map",
+      "orig_code": 59175,
+      "src": "entypo",
+      "from": 59175
+    },
+    {
+      "search": [
+        "arrow",
+        "up",
+        "upload"
+      ],
+      "code": 59227,
+      "uid": "64691230b90991883f94c6dfb2afc90a",
+      "css": "up-circled",
+      "orig_css": "up-circled",
+      "orig_code": 59227,
+      "src": "entypo",
+      "from": 59227
+    },
+    {
+      "search": [
+        "arrow",
+        "up"
+      ],
+      "code": 59239,
+      "uid": "0805cca616b3c12714f35af4d0912c10",
+      "css": "up-open-big",
+      "orig_css": "up-open-big",
+      "orig_code": 59239,
+      "src": "entypo",
+      "from": 59239
+    },
+    {
+      "search": [
+        "net"
+      ],
+      "code": 59254,
+      "uid": "414fe97e4af5215a06d29be0f2cecdf5",
+      "css": "network",
+      "orig_css": "network",
+      "orig_code": 59254,
+      "src": "entypo",
+      "from": 59254
+    },
+    {
+      "search": [
+        "dot"
+      ],
+      "code": 59275,
+      "from": 59275,
+      "uid": "d2c6b59d9a239140cb76be0627480855",
+      "css": "dot",
+      "orig_css": "dot",
+      "orig_code": 59275,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "dot",
+        "flickr"
+      ],
+      "code": 59276,
+      "from": 59276,
+      "uid": "13b11ab72c6ae9c97ee12428e17f3a4e",
+      "css": "dot-2",
+      "orig_css": "dot-2",
+      "orig_code": 59276,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "dot"
+      ],
+      "code": 59277,
+      "from": 59277,
+      "uid": "d10920db2e79c997c5e783279291970c",
+      "css": "dot-3",
+      "orig_css": "dot-3",
+      "orig_code": 59277,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "target"
+      ],
+      "code": 127919,
+      "uid": "3eadc3e443cf1c7e17f1b44d21254c00",
+      "css": "target",
+      "orig_css": "target",
+      "orig_code": 127919,
+      "src": "entypo",
+      "from": 127919
+    },
+    {
+      "search": [
+        "tv",
+        "screen",
+        "monitor"
+      ],
+      "code": 128187,
+      "uid": "b7a336095aa4535c3689cb557edf23db",
+      "css": "monitor",
+      "orig_css": "monitor",
+      "orig_code": 128187,
+      "src": "entypo",
+      "from": 128187
+    },
+    {
+      "search": [
+        "mobile",
+        "iphone"
+      ],
+      "code": 128241,
+      "uid": "767fede84586366cd7d6c835be745454",
+      "css": "mobile",
+      "orig_css": "mobile",
+      "orig_code": 128241,
+      "src": "entypo",
+      "from": 128241
+    },
+    {
+      "search": [
+        "shuffle",
+        "random"
+      ],
+      "code": 128256,
+      "uid": "3d349daaea304032a7669b4f24931b6c",
+      "css": "shuffle",
+      "orig_css": "shuffle",
+      "orig_code": 128256,
+      "src": "entypo",
+      "from": 128256
+    }
+  ]
+}

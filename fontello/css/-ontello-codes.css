@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+.icon-up-thin:before { content: '\2191'; } /* '↑' */
+.icon-up-dir:before { content: '\25b4'; } /* '▴' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-feather:before { content: '\2712'; } /* '✒' */
+.icon-quote:before { content: '\275e'; } /* '❞' */
+.icon-up-bold:before { content: '\e4af'; } /* '' */
+.icon-address:before { content: '\e723'; } /* '' */
+.icon-location:before { content: '\e724'; } /* '' */
+.icon-map:before { content: '\e727'; } /* '' */
+.icon-up-circled:before { content: '\e75b'; } /* '' */
+.icon-up-open-big:before { content: '\e767'; } /* '' */
+.icon-network:before { content: '\e776'; } /* '' */
+.icon-dot:before { content: '\e78b'; } /* '' */
+.icon-dot-2:before { content: '\e78c'; } /* '' */
+.icon-dot-3:before { content: '\e78d'; } /* '' */
+.icon-target:before { content: '🎯'; } /* '\1f3af' */
+.icon-monitor:before { content: '💻'; } /* '\1f4bb' */
+.icon-mobile:before { content: '📱'; } /* '\1f4f1' */
+.icon-shuffle:before { content: '🔀'; } /* '\1f500' */
