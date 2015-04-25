@@ -3,12 +3,12 @@
     height: 13px;
     margin: 0 auto 20px auto;
     padding: 0px;
-    
+
     background: #cfcfcf;
     border-width: 1px;
     border-style: solid;
-    border-color: #aaa #bbb #fff #bbb;    
-    box-shadow: inset 0px 2px 3px #bbb;    
+    border-color: #aaa #bbb #fff #bbb;
+    box-shadow: inset 0px 2px 3px #bbb;
 }
 .progressbar, .progressbar-inner {
     border-radius:4px;
@@ -21,23 +21,7 @@
     height: 100%;
     background: #999;
     background-size: 18px 18px;
-    background-color: #ac0;   
-    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    
+    background-color: #ac0;       
     box-shadow:inset 0px 2px 8px rgba(255, 255, 255, .5), inset -1px -1px 0px rgba(0, 0, 0, .2);
 }
 
