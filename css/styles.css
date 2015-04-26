@@ -15,13 +15,8 @@
 6.  EXPERIENCE
 7.  EDUCATION
 8.  PORTFOLIO
-8.  MY_BLOG
-9.  FOOTER
 
-10. BLOG
-11. SINGLE_POST
-
-12.  RESPONSIVE
+9.  RESPONSIVE
 
 */
 
@@ -292,6 +287,9 @@ body {
 }
 .soc img {
 	max-width: 100%;
+}
+.print_links {
+	display: none;
 }
 .info {
 	margin-top: 50px;
@@ -804,5 +802,47 @@ body {
 	}
 	.comment_form {
 		background: #dfdcdf url("../img/form-bg@2x.png") repeat;
+	}
+}
+
+/*-----------------------------*\
+	$PRINT
+\*-----------------------------*/
+
+@media print {
+	body {
+		font-size: 6pt;
+	}
+	.site_nav {
+		display: none;
+	}
+	.soc {
+		display: none;
+	}
+	.print_links {
+		float: left;
+		display: inline-block;
+	}
+	.print_links ul li {
+		padding-bottom: 20px;
+	}
+	.print_links img {
+		padding-right: 5px;
+	}
+	.info {
+		display: inline-block;
+		margin-top: 0px;
+		float: right;
+	}
+	.progressbar {
+		height: 0px;
+	}
+	.progressbar-inner {
+		border: 5px solid #f2c345;
+		height: 0px;
+		float: left;
+	}
+	section {
+		page-break-inside: avoid;
 	}
 }
