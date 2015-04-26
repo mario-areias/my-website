@@ -212,6 +212,9 @@ body {
 	margin-right: 8%;
 	margin-left: 8%;
 }
+.print_sign {
+	display:none;
+}
 
 /*-----------------------------*\
 	$ABOUT_ME
@@ -819,10 +822,19 @@ body {
 	section {
 		page-break-inside: avoid;
 	}
+	.my_expertise {
+		margin-top: 10px;
+	}
 	.site_header {
 		padding-top: 0px;
 	}
 	.site_nav {
+		display: none;
+	}
+	.print_sign {
+		display: block;
+	}
+	.print_button {
 		display: none;
 	}
 
