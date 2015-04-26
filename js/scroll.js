@@ -1,14 +1,24 @@
-$(function(){
-  var menuItems, scrollItems = [];
-  var topMenuHeight, lastId = 0;
-  var topMenu = $("#site_nav");
-  var current_width = $(window).width();
+/* This is my version for this code.
 
+ You can buy the original code here:
+
+ http://themeforest.net/item/perfectcv-responsive-bootstrap-cv-resume/4102616
+
+*/
+
+$(function(){
   var MOBILE_SCREEN_WIDTH = 767;
   var BIG_SCREEN_WIDTH = 940;
   var DISTANCE_FROM_TOP_BIG_SCREEN = 60;
   var DISTANCE_FROM_TOP_SMALL_SCREEN = -140;
   var SCROLL_SPEED_ANIMATION = 300;
+
+  var lastId = 0;
+
+  var current_width = $(window).width();
+  var topMenu = $(".site_nav");
+  var menuItems = topMenu.find("a");
+  var scrollItems = getScrollItems();
 
   $(window).on('load resize', function () {
     if ( current_width < MOBILE_SCREEN_WIDTH ) {
@@ -18,29 +28,11 @@ $(function(){
     }
   });
 
-  // Cache selectors
-  if ( $(window).width() > BIG_SCREEN_WIDTH ) {
-    scrollItems = getScrollItems(DISTANCE_FROM_TOP_BIG_SCREEN);
-  } else {
-    scrollItems = getScrollItems(DISTANCE_FROM_TOP_SMALL_SCREEN);
-  }
-
-  function getScrollItems(distance){
-      topMenuHeight = topMenu.outerHeight() + distance;
-      // All list items
-      menuItems = topMenu.find("a");
-      // Anchors corresponding to menu items
-      return menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
-      });
-  }
-
   // Bind click handler to menu items
   // so we can get a fancy scroll animation
   menuItems.click(function(e){
     var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+      offsetTop = href === "#" ? 0 : $(href).offset().top - (getTopMenuHeight() + 1);
     $('html, body').stop().animate({
       scrollTop: offsetTop
     }, SCROLL_SPEED_ANIMATION);
@@ -50,7 +42,7 @@ $(function(){
   // Bind to scroll
   $(window).scroll(function(){
      // Get container scroll position
-     var fromTop = $(this).scrollTop()+topMenuHeight;
+     var fromTop = $(this).scrollTop() + getTopMenuHeight();
 
      // Get id of current scroll item
      var cur = scrollItems.map(function(){
@@ -72,7 +64,7 @@ $(function(){
 
   $(window).scroll(function(){
     var pos = $(window).scrollTop();
-    if (pos > 55 && current_width > 940) {
+    if (pos > 55 && current_width > BIG_SCREEN_WIDTH) {
       $(".site_nav").css({
           "position": "fixed",
           "top":    "0",
@@ -104,4 +96,22 @@ $(function(){
     event.preventDefault();
     window.print();
   });
+
+
+  function getScrollItems(){
+      var topMenuHeight = getTopMenuHeight();
+      // Anchors corresponding to menu items
+      return menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
+  }
+
+  function getTopMenuHeight(){
+    if ( $(window).width() > BIG_SCREEN_WIDTH ) {
+      return topMenu.outerHeight() + DISTANCE_FROM_TOP_BIG_SCREEN;
+    } else {
+      return topMenu.outerHeight() + DISTANCE_FROM_TOP_SMALL_SCREEN;
+    }
+  }
 });
