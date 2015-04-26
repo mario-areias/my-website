@@ -31,8 +31,11 @@ $(function(){
   // Bind click handler to menu items
   // so we can get a fancy scroll animation
   menuItems.click(function(e){
-    var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top - (getTopMenuHeight() + 1);
+    var href = $(this).attr("href");
+    if (href === "#"){
+      return;
+    }
+    var offsetTop = $(href).offset().top + 1 - getTopMenuHeight();
     $('html, body').stop().animate({
       scrollTop: offsetTop
     }, SCROLL_SPEED_ANIMATION);
@@ -51,7 +54,7 @@ $(function(){
      });
      // Get the id of the current element
      cur = cur[cur.length-1];
-     var id = cur && cur.length ? cur[0].id : "";
+     var id = cur && cur.length ? cur[0].id : "null";
 
      if (lastId !== id) {
        lastId = id;

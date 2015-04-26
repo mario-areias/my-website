@@ -216,6 +216,12 @@ body {
 	display:none;
 }
 
+.print_button {
+	position: absolute;
+	right: 40px;
+	top: 10px;
+}
+
 /*-----------------------------*\
 	$ABOUT_ME
 \*-----------------------------*/
