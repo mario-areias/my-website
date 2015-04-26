@@ -813,9 +813,19 @@ body {
 	body {
 		font-size: 6pt;
 	}
+
+	/*Adapt header in order to have a printable version*/
+	section {
+		page-break-inside: avoid;
+	}
+	.site_header {
+		padding-top: 0px;
+	}
 	.site_nav {
 		display: none;
 	}
+
+	/*Display print version of the links page*/
 	.soc {
 		display: none;
 	}
@@ -834,6 +844,9 @@ body {
 		margin-top: 0px;
 		float: right;
 	}
+
+
+	/*Making progress bar appear when priting*/
 	.progressbar {
 		height: 0px;
 	}
@@ -841,8 +854,5 @@ body {
 		border: 5px solid #f2c345;
 		height: 0px;
 		float: left;
-	}
-	section {
-		page-break-inside: avoid;
 	}
 }
