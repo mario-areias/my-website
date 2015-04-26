@@ -1,10 +1,17 @@
 $(function(){
   var menuItems, scrollItems = [];
-  var topMenu, topMenuHeight = 0;
+  var topMenuHeight, lastId = 0;
+  var topMenu = $("#site_nav");
+  var current_width = $(window).width();
+
+  var MOBILE_SCREEN_WIDTH = 767;
+  var BIG_SCREEN_WIDTH = 940;
+  var DISTANCE_FROM_TOP_BIG_SCREEN = 60;
+  var DISTANCE_FROM_TOP_SMALL_SCREEN = -140;
+  var SCROLL_SPEED_ANIMATION = 300;
 
   $(window).on('load resize', function () {
-    current_width = $(window).width();
-    if ( current_width < 767 ) {
+    if ( current_width < MOBILE_SCREEN_WIDTH ) {
       $("br").hide();
     } else {
       $("br").show();
@@ -12,31 +19,22 @@ $(function(){
   });
 
   // Cache selectors
-  if ( $(window).width() > 940 ) {
-    var lastId,
-      topMenu = $("#site_nav")
-      topMenuHeight = topMenu.outerHeight()+40,
-      // All list items
-      menuItems = topMenu.find("a"),
-      // Anchors corresponding to menu items
-      scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
-      });
+  if ( $(window).width() > BIG_SCREEN_WIDTH ) {
+    scrollItems = getScrollItems(DISTANCE_FROM_TOP_BIG_SCREEN);
   } else {
-    var lastId,
-      topMenu = $("#site_nav")
-      topMenuHeight = topMenu.outerHeight()-140,
-      // All list items
-      menuItems = topMenu.find("a"),
-      // Anchors corresponding to menu items
-      scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
-      });
-
+    scrollItems = getScrollItems(DISTANCE_FROM_TOP_SMALL_SCREEN);
   }
 
+  function getScrollItems(distance){
+      topMenuHeight = topMenu.outerHeight() + distance;
+      // All list items
+      menuItems = topMenu.find("a");
+      // Anchors corresponding to menu items
+      return menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
+  }
 
   // Bind click handler to menu items
   // so we can get a fancy scroll animation
@@ -45,7 +43,7 @@ $(function(){
       offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
     $('html, body').stop().animate({
       scrollTop: offsetTop
-    }, 300);
+    }, SCROLL_SPEED_ANIMATION);
     e.preventDefault();
   });
 
@@ -70,7 +68,7 @@ $(function(){
        .parent().removeClass("active")
        .end().filter("[href=#"+id+"]").parent().addClass("active");
      }
-  });// $('.scrollup').fadeIn();
+  });
 
   $(window).scroll(function(){
     var pos = $(window).scrollTop();
