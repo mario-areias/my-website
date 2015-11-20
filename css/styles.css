@@ -853,15 +853,18 @@ body {
 		display: inline-block;
 	}
 	.print_links ul li {
-		padding-bottom: 20px;
+		padding-bottom: 3px;
 	}
 	.print_links img {
-		padding-right: 5px;
+		padding-right: 3px;
 	}
 	.info {
 		display: inline-block;
-		margin-top: 0px;
-		float: right;
+		margin-top: 10px;
+		width: 250px;
+	}
+	.info ul li a {
+		padding-left: 15px;
 	}
 
 
