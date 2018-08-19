@@ -1,0 +1,31 @@
+---
+language: node_js
+
+node_js:
+  - node
+
+cache:
+  directories:
+   - ./binaries/
+
+# Clean and don't fail
+install:
+  - pip install --user awscli
+# Build the website
+script:
+  - echo "Building..."
+
+# deploy to S3
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "marioareias.com"
+  skip_cleanup: true
+  region: ap-southeast-2
+  on:
+branch: master
+
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - test $TRAVIS_BRANCH = "master" && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
